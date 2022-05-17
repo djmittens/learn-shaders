@@ -27,13 +27,11 @@ void main() {
   vec3 c_color = mix(color, vec3(0.9686, 0.9569, 0.3608), cell_m * length(color));
 
   // Column
-  cell_m = col_cell;
-  cell_m *= SelectCell(mt_n.x, 9., st.x);
+  cell_m = SelectCell(mt_n.x, 9., st.x);
   c_color = mix(c_color, vec3(0.4471, 0.9059, 0.9059), cell_m * length(color));
 
   // Row
-  cell_m = row_cell;
-  cell_m *= SelectCell(mt_n.y, 9., st.y);
+  cell_m = SelectCell(mt_n.y, 9., st.y);
   c_color = mix(c_color, vec3(0.4471, 0.9059, 0.9059), cell_m * length(color));
 
   // Cell
